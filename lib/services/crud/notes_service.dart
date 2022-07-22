@@ -10,6 +10,8 @@ class NotesService {
 
   List<DatabaseNote> _notes = [];
 
+  //DatabaseUser? _user;`
+
   static final NotesService _shared = NotesService._sharedInstance();
   NotesService._sharedInstance() {
     _notesStreamController = StreamController<List<DatabaseNote>>.broadcast(
@@ -308,7 +310,7 @@ const noteTable = 'note';
 const userTable = 'user';
 const idColumn = 'id';
 const emailColumn = 'email';
-const userIdColumn = 'userId';
+const userIdColumn = 'user_id';
 const textColumn = 'text';
 const isSyncedWithCloudColumn = 'is_synced_with_cloud';
 const createUserTable = '''CREATE TABLE IF NOT EXISTS "user" (
